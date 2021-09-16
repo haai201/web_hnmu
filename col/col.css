@@ -1,0 +1,106 @@
+.col {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    max-width: 100%
+}
+
+.col-2 {
+    -ms-flex-preferred-size: calc(16.66% - 0.01px - 1em);
+    -ms-flex-preferred-size: calc(16.66% - 0.01px - var(--grid-gap, 1em));
+    flex-basis: calc(16.66% - 0.01px - 1em);
+    flex-basis: calc(16.66% - 0.01px - var(--grid-gap, 1em));
+    max-width: calc(16.66% - 0.01px - 1em);
+    max-width: calc(16.66% - 0.01px - var(--grid-gap, 1em))
+}
+
+.col-3 {
+    -ms-flex-preferred-size: calc(25% - 0.01px - 1em);
+    -ms-flex-preferred-size: calc(25% - 0.01px - var(--grid-gap, 1em));
+    flex-basis: calc(25% - 0.01px - 1em);
+    flex-basis: calc(25% - 0.01px - var(--grid-gap, 1em));
+    max-width: calc(25% - 0.01px - 1em);
+    max-width: calc(25% - 0.01px - var(--grid-gap, 1em))
+}
+
+.col-4 {
+    -ms-flex-preferred-size: calc(33.33% - 0.01px - 1em);
+    -ms-flex-preferred-size: calc(33.33% - 0.01px - var(--grid-gap, 1em));
+    flex-basis: calc(33.33% - 0.01px - 1em);
+    flex-basis: calc(33.33% - 0.01px - var(--grid-gap, 1em));
+    max-width: calc(33.33% - 0.01px - 1em);
+    max-width: calc(33.33% - 0.01px - var(--grid-gap, 1em))
+}
+
+.col-5 {
+    -ms-flex-preferred-size: calc(41.66% - 0.01px - 1em);
+    -ms-flex-preferred-size: calc(41.66% - 0.01px - var(--grid-gap, 1em));
+    flex-basis: calc(41.66% - 0.01px - 1em);
+    flex-basis: calc(41.66% - 0.01px - var(--grid-gap, 1em));
+    max-width: calc(41.66% - 0.01px - 1em);
+    max-width: calc(41.66% - 0.01px - var(--grid-gap, 1em))
+}
+
+.col-6 {
+    -ms-flex-preferred-size: calc(50% - 0.01px - 1em);
+    -ms-flex-preferred-size: calc(50% - 0.01px - var(--grid-gap, 1em));
+    flex-basis: calc(50% - 0.01px - 1em);
+    flex-basis: calc(50% - 0.01px - var(--grid-gap, 1em));
+    max-width: calc(50% - 0.01px - 1em);
+    max-width: calc(50% - 0.01px - var(--grid-gap, 1em))
+}
+
+.col-7 {
+    -ms-flex-preferred-size: calc(58.33% - 0.01px - 1em);
+    -ms-flex-preferred-size: calc(58.33% - 0.01px - var(--grid-gap, 1em));
+    flex-basis: calc(58.33% - 0.01px - 1em);
+    flex-basis: calc(58.33% - 0.01px - var(--grid-gap, 1em));
+    max-width: calc(58.33% - 0.01px - 1em);
+    max-width: calc(58.33% - 0.01px - var(--grid-gap, 1em))
+}
+
+.col-8 {
+    -ms-flex-preferred-size: calc(66.66% - 0.01px - 1em);
+    -ms-flex-preferred-size: calc(66.66% - 0.01px - var(--grid-gap, 1em));
+    flex-basis: calc(66.66% - 0.01px - 1em);
+    flex-basis: calc(66.66% - 0.01px - var(--grid-gap, 1em));
+    max-width: calc(66.66% - 0.01px - 1em);
+    max-width: calc(66.66% - 0.01px - var(--grid-gap, 1em))
+}
+
+.col-9 {
+    -ms-flex-preferred-size: calc(75% - 0.01px - 1em);
+    -ms-flex-preferred-size: calc(75% - 0.01px - var(--grid-gap, 1em));
+    flex-basis: calc(75% - 0.01px - 1em);
+    flex-basis: calc(75% - 0.01px - var(--grid-gap, 1em));
+    max-width: calc(75% - 0.01px - 1em);
+    max-width: calc(75% - 0.01px - var(--grid-gap, 1em))
+}
+
+.col-10 {
+    -ms-flex-preferred-size: calc(83.33% - 0.01px - 1em);
+    -ms-flex-preferred-size: calc(83.33% - 0.01px - var(--grid-gap, 1em));
+    flex-basis: calc(83.33% - 0.01px - 1em);
+    flex-basis: calc(83.33% - 0.01px - var(--grid-gap, 1em));
+    max-width: calc(83.33% - 0.01px - 1em);
+    max-width: calc(83.33% - 0.01px - var(--grid-gap, 1em))
+}
+
+.col-11 {
+    -ms-flex-preferred-size: calc(91.66% - 0.01px - 1em);
+    -ms-flex-preferred-size: calc(91.66% - 0.01px - var(--grid-gap, 1em));
+    flex-basis: calc(91.66% - 0.01px - 1em);
+    flex-basis: calc(91.66% - 0.01px - var(--grid-gap, 1em));
+    max-width: calc(91.66% - 0.01px - 1em);
+    max-width: calc(91.66% - 0.01px - var(--grid-gap, 1em))
+}
+
+.col-12 {
+    -ms-flex-preferred-size: calc(100% - 0.01px - 1em);
+    -ms-flex-preferred-size: calc(100% - 0.01px - var(--grid-gap, 1em));
+    flex-basis: calc(100% - 0.01px - 1em);
+    flex-basis: calc(100% - 0.01px - var(--grid-gap, 1em));
+    max-width: calc(100% - 0.01px - 1em);
+    max-width: calc(100% - 0.01px - var(--grid-gap, 1em))
+}
