@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="edit.css">
+    <link rel="stylesheet" href="col/col.css">
+    <link rel="stylesheet" href="PickDate/css/datepicker.css">
+    <link rel="stylesheet" href="PickDate/css/jquery-ui.css">
+    <title>Khoa khoa học TN và CN</title>
+</head>
+
+<body>
+    <!-- Nút Scroll down -->
+
+    <button type="button" class="btn btn-light btn-lg back-to-top" id="btn-back-to-top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+    <!-- Nút Scroll down -->
+    <!-- Ảnh header -->
+    <img src="banner2020.png" class="img" style="width:100%;">
+    <!-- Ảnh header -->
+
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-home"></i> Trang chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bars"></i> Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Chương trình đào tạo</a>
+                            <a class="dropdown-item" href="#">Điểm</a>
+
+                            <a class="dropdown-item" href="#">Tra cứu lịch</a>
+                        </div>
+                    </li>
+
+                    <div class="dropdown">
+                        <a class="nav-item nav-link" href="#" role="button" id="dropdownTraCuuLich" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="far fa-calendar-times"></i> Tra cứu lịch
+                        </a>
+                        <div class="dropdown-menu stylecolor" aria-labelledby="dropdownTraCuuLich">
+                            <a class="dropdown-item" href="#">Lịch học</a>
+                            <a class="dropdown-item" href="#">Lịch công tác</a>
+                            <a class="dropdown-item" href="#">Lịch giảng dậy</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <a class="nav-item nav-link" href="#" role="button" id="dropdownDiem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-star" aria-hidden="true"></i> Điểm
+                        </a>
+                        <div class="dropdown-menu stylecolor" aria-labelledby="dropdownDiem">
+                            <a class="dropdown-item" href="#">Tra cứu điểm</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="nav-item nav-link" href="#" role="button" id="dropdownCTDT" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-book-open" aria-hidden="true"></i> Chương trình đào tạo
+                        </a>
+                        <div class="dropdown-menu stylecolor" aria-labelledby="dropdownCTDT">
+
+                            <a class="dropdown-item" href="#">Toàn trường</a>
+                            <a class="dropdown-item" href="#">Chuyên ngành chính</a>
+                            <a class="dropdown-item" href="#">Chuyên ngành hai</a>
+                        </div>
+                    </div>
+                </ul>
+                <div class="nav navbar-nav ml-auto dropdown">
+                    <a data-toggle="dropdown" href="" class="nav-item nav-link" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                        <span><i class="fas fa-user" aria-hidden="true"></i>  Dương Văn Nhã</span>
+                    </a>
+                    <div class="dropdown-menu stylecolor" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                        <a class="dropdown-item" href="#">Tài khoản</a>
+                        <a class="dropdown-item" href="#">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar -->
+    <!-- khu vực hiển thị chính -->
+    <div class="container-fluid">
+        <div class="row m-0">
+            <div class="panel panel-primary filterable w-100">
+                <div class="panel-heading">
+                    <div class="row">
+                        <ol id="breadcumb" class="breadcrumb col">
+                            <li><a href="/">Trang chủ</a> / Sửa lớp học phần</li>
+                        </ol>
+                    </div>
+                    <br>
+                    <div class="w-100 mb-2 card">
+                        <div class="card-header">
+                            <div class="row text-center">
+                                <div class="col-md">
+                                    <label class="control-label">SỬA LỚP HỌC PHẦN</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-3 align-items-center">
+                                <label class="control-label">Thuộc lớp học phần</label>
+                                <div class="col-md-3">
+                                    <select class="js-example-basic-single" id="sortBy" onchange="" style="width:100%">
+                                        <option value="TenLopHocPhan">Tên lớp học phần</option>
+                                        <option value="HocPhan">Học phần</option>
+                                        <option value="GiangVien">Giảng viên</option>
+                                        <option value="HocKy">Học kỳ</option>
+                                        <option value="NamHoc">Năm học</option>
+                                        <option value="MoTa">Mô tả</option>
+                                        <option value="HanKetThucNhapDiem">Hạn kết thúc nhập điểm</option>
+                                        <option value="CreateAt" selected>Ngày thêm</option>
+                                        <option value="UpdateAt">Ngày sửa</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="row mb-3 align-items-center">
+                                <div class="col-md-1">
+                                    <label class="control-label">Tên lớp học phần</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="searchTenLHP" />
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="control-label">Thuộc học phần</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="js-example-basic-single" id="searchHocPhan" style="width:100%">
+                                        <option value="" selected>--- Chọn học phần ---</option>
+                                        <option value="1">Lập trình cơ bản</option>
+                                        <option value="2">Toán rời rạc</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="control-label">Giảng viên dạy</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="js-example-basic-single" id="searchGiangVien" style="width:100%">
+                                        <option value="" selected>--- Chọn giảng viên ---</option>
+                                        <option value="1">Hà Đặng Cao Tùng</option>
+                                        <option value="2">Hoàng Thi Mai</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3 align-items-center ">
+                                <div class="col-md-1">
+                                    <label class="control-label">Học kỳ</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="js-example-basic-single" id="searchHocKy" style="width:100%">
+                                        <option value="" selected>--- Chọn học kì ---</option>
+                                        <option value="1">Học kỳ 1</option>
+                                        <option value="2">Học kỳ 2</option>
+                                        <option value="3">Học kỳ phụ</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="control-label">Năm học</label>
+                                </div>
+                                <div class="col-md-3 form-search">
+                                    <select class="js-example-basic-single" id="searchNamHoc" style="width:100%">
+                                        <option value="" selected>--- Chọn năm học ---</option>
+                                        <option value="2019">2019-2020</option>
+                                        <option value="2020">2020-2021</option>
+                                        <option value="2021">2021-2022</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="control-label">Mô tả</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="searchMoTa" />
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center">
+                                <div class="col-md-1">
+                                    <label class="control-label">Hạn kết thúc nhập điểm từ</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="date" class="form-control datepicker" id="searchHanKetThucNhapDiemTu" />
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="control-label">Hạn kết thúc nhập điểm đến</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="date" class="form-control datepicker" id="searchHanKetThucNhapDiemDen" />
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="control-label ">Ngày thêm từ</label>
+                                </div>
+                                <div class="col-md-3 ">
+                                    <input type="date" class="form-control datepicker " id="searchCreateAtTu " />
+                                </div>
+
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-1 ">
+                                    <label class="control-label ">Ngày thêm dến</label>
+                                </div>
+                                <div class="col-md-3 ">
+                                    <input type="date" class="form-control datepicker " id="searchCreateAtDen " />
+                                </div>
+                                <div class="col-md-1 ">
+                                    <label class="control-label ">Ngày sửa từ</label>
+                                </div>
+                                <div class="col-md-3 ">
+                                    <input type="date" class="form-control datepicker " id="searchUpdateAtTu " />
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="control-label ">Ngày sửa đến</label>
+                                </div>
+                                <div class="col-md-3 ">
+                                    <input type="date" class="form-control datepicker " id="searchUpdateAtDen " />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> -->
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- khu vực hiển thị chính -->
+    <!-- footer -->
+    <footer class="px-3 ">
+        <div class=" ">
+            <div class="row mt-2 p-2 ">
+                <div class="col-sm-12 col-2 footer-text text-center ">
+
+                    <img src="Assets/images/output-onlinepngtools.png " class="rounded-circle bg-white " alt="Logo Khoa " width="40% ">
+                    <p>Copyright © 2020, Trường Đại Học Thủ đô Hà Nội</p>
+
+                </div>
+                <div class="col-sm-12 col-2 footer-text text-center ">
+
+                    <p><i class="fa fa-facebook " aria-hidden="true "></i> Facebook</p>
+                    <p><i class="fa fa-twitter " aria-hidden="true "></i> Twitter</p>
+                    <p><i class="fa fa-instagram " aria-hidden="true "></i> Instagram</p>
+                </div>
+                <div class="col-sm-12 col-5 footer-text text-center ">
+                    <p>Địa chỉ: 98 phố Dương Quảng Hàm, Quan Hoa, Cầu Giấy, Hà Nội.</p>
+                    <p>Điện thoại: (+84) 24.3833.0708</p>
+                    <p>FAX: (+84) 24.3833.5426</p>
+                    <p>Email: daotao.hnmu.cntt@gmail.com</p>
+                </div>
+                <div class="col-sm-12 col-3 footer-text footer-send-mail ">
+                    <label>Nhận phản hồi qua</label>
+                    <br>
+                    <div class="btn-group ">
+                        <input type="text " name="sendMail " placeholder="Email ">
+                        <button type="button " class="btn-primary ">Gửi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+    <script src="index.js "></script>
+    <script src="Bootstrap/jquery-3.2.1.slim.min.js "></script>
+    <script src="Bootstrap/popper.min.js "></script>
+    <script src="Bootstrap/bootstrap.min.js "></script>
+    <script src="PickDate/js/bootstrap-datepicker.js "></script>
+    <script src="PickDate/js/moment.js "></script>
+    <script src="PickDate/js/jquery-ui.js "></script>
+    <script src="PickDate/js/jquery-1.12.4.js "></script>
+    <script>
+        $('.datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+</body>
+
+</html>
